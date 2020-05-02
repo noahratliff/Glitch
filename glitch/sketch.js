@@ -12,7 +12,7 @@ function setup() {
         glitch = new Glitch(img);
         isLoaded = true;
     });
-    img2 = loadImage(imgSrc, img2 =>{       img2.resize(windowW,windowH);
+    img2 = loadImage(imgSrc, img2 =>{img2.resize(windowW,windowH);
     });
     ;
 }
