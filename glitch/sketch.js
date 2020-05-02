@@ -12,16 +12,16 @@ function setup() {
         glitch = new Glitch(img);
         isLoaded = true;
     });
-    img2 = loadImage(imgSrc, img2 =>{img2.resize(windowW,windowH);
+    img2 = loadImage(imgSrc, img2 =>{       img2.resize(windowW,windowH);
     });
     ;
 }
 
 function draw() {
-    frameRate(1);
+    frameRate(8);
     clear();
     background(0);
-    if (frames < 10) {
+    if (frames < 16) {
       if (isLoaded) {
           glitch.show();
       }
