@@ -8,11 +8,13 @@ let frames = 0;
 function setup() {
     background(0);
     createCanvas(windowW, windowH);
-    loadImage(imgSrc.resize(windowW,windowH), function(img) {
+    loadImage(imgSrc, function(img) {
         glitch = new Glitch(img);
         isLoaded = true;
     });
-    img2 = loadImage(imgSrc.resize(windowW,windowH));
+    img2 = loadImage(imgSrc, img2 =>{       img2.resize(windowW,windowH);
+    });
+    ;
 }
 
 function draw() {
@@ -24,16 +26,18 @@ function draw() {
           glitch.show();
       }
     } else {
-      image(img2.imgOrigin,0,0);
-
+      image(img2,0,0);
+      noLoop();
     }
-
+  
+    console.log(frames);
     frames+=1
 
 }
 
 class Glitch {
     constructor(img) {
+        img.resize(windowW,windowH)
         this.channelLen = 4;
         this.imgOrigin = img;
         this.imgOrigin.loadPixels();
