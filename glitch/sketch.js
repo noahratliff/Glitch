@@ -30,7 +30,8 @@ function draw() {
     } else {
         if (frames < 32) {
             image(img2,0,0);
-        }
+                }
+        
         else {
             if (frames < 35) {
                 glitch.show();
@@ -38,6 +39,7 @@ function draw() {
             else {
                 image(img2,0,0)
                 noLoop();
+            }
         }
     }
   
