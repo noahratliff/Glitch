@@ -9,10 +9,11 @@ function setup() {
     background(0);
     createCanvas(windowW, windowH);
     loadImage(imgSrc, function(img) {
-        glitch = new Glitch(img);
-        isLoaded = true;
+      img.resize(windowW,windowH);  
+      glitch = new Glitch(img);
+      isLoaded = true;
     });
-    img2 = loadImage(imgSrc, img2 =>{       img2.resize(windowW,windowH);
+    img2 = loadImage(imgSrc, img2 =>{         img2.resize(windowW,windowH);
     });
     ;
 }
