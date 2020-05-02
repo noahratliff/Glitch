@@ -24,6 +24,7 @@ function draw() {
     background(0);
     if (frames < 16) {
       if (isLoaded) {
+          console.log('here')
           glitch.show();
       }
     } else {
