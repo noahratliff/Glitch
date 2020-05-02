@@ -24,7 +24,7 @@ function draw() {
           glitch.show();
       }
     } else {
-      image(img2,0,0);
+      image(img2.imgOrigin,0,0);
 
     }
 
