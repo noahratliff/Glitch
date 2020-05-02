@@ -8,11 +8,11 @@ let frames = 0;
 function setup() {
     background(0);
     createCanvas(windowW, windowH);
-    loadImage(imgSrc, function(img) {
+    loadImage(imgSrc.resize(windowW,windowH), function(img) {
         glitch = new Glitch(img);
         isLoaded = true;
     });
-    img2 = loadImage(imgSrc);
+    img2 = loadImage(imgSrc.resize(windowW,windowH));
 }
 
 function draw() {
