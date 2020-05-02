@@ -27,8 +27,17 @@ function draw() {
           glitch.show();
       }
     } else {
-      image(img2,0,0);
-      noLoop();
+        if (frames < 32) {
+            image(img2,0,0);
+        }
+        else {
+            if (frames < 35) {
+                glitch.show();
+            }
+            else {
+                image(img2,0,0)
+                noLoop();
+        }
     }
   
     console.log(frames);
